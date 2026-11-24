@@ -1,0 +1,90 @@
+name: Refresh and publish briefing
+
+on:
+  workflow_dispatch:          # manual "Run workflow" button, and the Apps Script trigger
+    inputs:
+      force_deploy:
+        description: Redeploy even if the briefing has not changed
+        type: boolean
+        default: false
+  schedule:                   # backup only; GitHub may delay or skip scheduled runs
+    - cron: '*/10 10-11 * * *'  # every 10 min, 5:00-6:50 a.m. Jamaica (UTC-5)
+    - cron: '23 */3 * * *'      # every 3 hours otherwise
+  push:
+    branches: [main]
+    paths: ['scripts/**', 'docs/index.html', 'config.json', '.github/workflows/publish.yml']
+
+permissions:
+  contents: write   # commit the last valid feed
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - id: pages
+        uses: actions/configure-pages@v5
+
+      - name: Run tests
+        run: python -m unittest discover -s tests -v
+
+      - name: Build feed from spreadsheet
+        id: feed
+        env:
+          SHEET_CSV_URL: ${{ secrets.SHEET_CSV_URL }}   # optional; config.json is used if unset
+        run: |
+          set +e
+          python scripts/build_feed.py --site-url "${{ steps.pages.outputs.base_url }}/" --test-feed _extra/test.json
+          code=$?
+          echo "code=$code" >> "$GITHUB_OUTPUT"
+          [ "$code" = "1" ] && exit 1
+          exit 0
+
+      - name: Save last valid feed
+        if: steps.feed.outputs.changed == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/briefing.json
+          git commit -m "Update briefing feed"
+          git pull --rebase --quiet
+          git push
+
+      - name: Assemble site
+        if: steps.feed.outputs.changed == 'true' || github.event_name == 'push' || inputs.force_deploy
+        run: |
+          mkdir -p _site
+          cp -r docs/. _site/
+          cp _extra/test.json _site/test.json
+          touch _site/.nojekyll
+
+      - if: steps.feed.outputs.changed == 'true' || github.event_name == 'push' || inputs.force_deploy
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+      - name: Deploy
+        id: deployment
+        if: steps.feed.outputs.changed == 'true' || github.event_name == 'push' || inputs.force_deploy
+        uses: actions/deploy-pages@v4
+
+      - name: Flag missing daily briefing
+        if: steps.feed.outputs.code == '3'
+        run: |
+          echo "::error::Today's briefing is not in the spreadsheet yet. Alexa is still reading the previous one."
+          exit 1
