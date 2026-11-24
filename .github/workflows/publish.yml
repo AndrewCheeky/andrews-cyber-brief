@@ -29,7 +29,7 @@ jobs:
     timeout-minutes: 10
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+      url: ${{ steps.deployment.outputs.page_url || steps.deployment_retry.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
 
@@ -78,9 +78,20 @@ jobs:
         with:
           path: _site
 
+      - name: Wait 60 s so GitHub has registered the upload
+        # GitHub can take a while to list a just-uploaded site; publishing too soon fails with "Found 0 artifacts".
+        if: steps.feed.outputs.changed == 'true' || github.event_name == 'push' || inputs.force_deploy
+        run: sleep 60
       - name: Deploy
         id: deployment
         if: steps.feed.outputs.changed == 'true' || github.event_name == 'push' || inputs.force_deploy
+        uses: actions/deploy-pages@v4
+        continue-on-error: true
+      - name: Wait 60 s before retrying the publish
+        if: steps.deployment.outcome == 'failure'
+        run: sleep 60
+      - id: deployment_retry
+        if: steps.deployment.outcome == 'failure'
         uses: actions/deploy-pages@v4
 
       - name: Flag missing daily briefing
