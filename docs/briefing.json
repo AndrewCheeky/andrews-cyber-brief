@@ -1,9 +1,9 @@
 [
   {
-    "uid": "urn:uuid:e4db2162-f790-5a00-8e22-450970e000a2",
-    "updateDate": "2026-11-24T03:33:00Z",
-    "titleText": "Cyber Trend Watcher 2026-11-23",
-    "mainText": "Andrew, two more flaws are now confirmed as actively exploited: MONAI Label and N-able Mail Assure. Check affected deployments, apply fixes and investigate earlier access. Medical imaging servers and email security systems need attention. Palo Alto customers should verify the correct firewall fixes, especially where HTTP two is enabled. Jamaica’s advisory also flags exposed storage, research applications and AI gateways. Cloud identity attacks remain a concern: review newly registered authentication methods and revoke suspicious sessions. Keep Cisco Expressway and VMware remediation open until owners provide evidence. Today’s priorities are simple: identify exposed systems, confirm repairs and check for compromise. Patching alone does not prove an attacker is gone.",
+    "uid": "urn:uuid:5e524b38-4afb-587a-95a2-3746e6e96404",
+    "updateDate": "2026-11-24T11:18:00Z",
+    "titleText": "Cyber Trend Watcher 2026-11-24",
+    "mainText": "Andrew, confirmed exploitation remains the priority. CISA has listed flaws in MONAI Label and N-able Mail Assure. Medical research systems and email security customers should confirm exposure and investigate earlier access. These items repeat yesterday evening’s briefing. Cisco Expressway, VMware vCenter and SAP also need documented remediation. Palo Alto customers using HTTP two should confirm their exact fixed release or apply the documented mitigation. Jamaica’s alert reinforces checks on storage, research applications and AI gateways. Today, identify affected systems, obtain patch and investigation evidence, and agree a dated next step with each account owner.",
     "redirectionUrl": "https://andrewcheeky.github.io/andrews-cyber-brief/"
   }
 ]
