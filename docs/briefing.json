@@ -1,9 +1,9 @@
 [
   {
-    "uid": "urn:uuid:5e524b38-4afb-587a-95a2-3746e6e96404",
-    "updateDate": "2026-11-24T11:18:00Z",
-    "titleText": "Cyber Trend Watcher 2026-11-24",
-    "mainText": "Andrew, confirmed exploitation remains the priority. CISA has listed flaws in MONAI Label and N-able Mail Assure. Medical research systems and email security customers should confirm exposure and investigate earlier access. These items repeat yesterday evening’s briefing. Cisco Expressway, VMware vCenter and SAP also need documented remediation. Palo Alto customers using HTTP two should confirm their exact fixed release or apply the documented mitigation. Jamaica’s alert reinforces checks on storage, research applications and AI gateways. Today, identify affected systems, obtain patch and investigation evidence, and agree a dated next step with each account owner.",
+    "uid": "urn:uuid:d7f61230-5502-5be4-a3d1-0a80874a0c8c",
+    "updateDate": "2026-11-24T15:40:00Z",
+    "titleText": "Cyber Trend Watcher 2026-11-24 | Manual rerun 10:40",
+    "mainText": "Andrew, today's priority is VMware infrastructure. Broadcom has released another critical advisory. Ask platform owners to confirm running builds and plan the applicable fixes. Keep the earlier exploited vCenter flaw separate, and request compromise-review evidence alongside patch confirmation. Norway's security authority also warns that attackers targeted secrets in Azure API Management. Check affected instances and rotate exposed credentials; closing the service flaw does not invalidate stolen secrets. GL.iNet confirms malware on some GoodCloud-connected routers and remote-control devices. Identify those devices and follow the vendor's firmware and recovery guidance. No new Caribbean incident was verified in this limited check. Focus today's conversations on platform evidence, credential rotation and remote-access recovery.",
     "redirectionUrl": "https://andrewcheeky.github.io/andrews-cyber-brief/"
   }
 ]
