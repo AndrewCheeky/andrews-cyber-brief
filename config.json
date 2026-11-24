@@ -1,0 +1,15 @@
+{
+  "sheet_id": "1vkLdR9L05xmDQOrVdctExkOoLkgGGtUsDzSU3OjHvF0",
+  "sheet_gid": "",
+  "timezone": "America/Jamaica",
+  "columns": {
+    "published": "Published (Jamaica)",
+    "title": "Report title",
+    "summary": "Alexa summary",
+    "status": "Status"
+  },
+  "published_status": "PUBLISHED",
+  "min_summary_chars": 200,
+  "max_age_days": 6,
+  "stale_alert_window_local": ["06:45", "09:00"]
+}
