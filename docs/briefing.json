@@ -1,9 +1,9 @@
 [
   {
-    "uid": "urn:uuid:d7f61230-5502-5be4-a3d1-0a80874a0c8c",
-    "updateDate": "2026-11-24T15:40:00Z",
-    "titleText": "Cyber Trend Watcher 2026-11-24 | Manual rerun 10:40",
-    "mainText": "Andrew, today's priority is VMware infrastructure. Broadcom has released another critical advisory. Ask platform owners to confirm running builds and plan the applicable fixes. Keep the earlier exploited vCenter flaw separate, and request compromise-review evidence alongside patch confirmation. Norway's security authority also warns that attackers targeted secrets in Azure API Management. Check affected instances and rotate exposed credentials; closing the service flaw does not invalidate stolen secrets. GL.iNet confirms malware on some GoodCloud-connected routers and remote-control devices. Identify those devices and follow the vendor's firmware and recovery guidance. No new Caribbean incident was verified in this limited check. Focus today's conversations on platform evidence, credential rotation and remote-access recovery.",
+    "uid": "urn:uuid:b61d7feb-42b7-5dff-8412-12640bbd63b2",
+    "updateDate": "2026-11-25T10:03:00Z",
+    "titleText": "Cyber Trend Watcher 2026-11-25",
+    "mainText": "Rackspace Spot customers face a reported service shutdown on December eighth following its security breach. Confirm the provider’s notice directly. If your business uses Spot, identify workloads, retrieve data, plan migration and test recovery. Cloud owners should also verify credential rotation. No customer deployment or regional compromise was confirmed. Earlier N-able reporting was already covered, so it is not presented as fresh news. Today’s priority is one practical question: does any production service or supplier depend on Spot? Regional and vendor coverage was incomplete.",
     "redirectionUrl": "https://andrewcheeky.github.io/andrews-cyber-brief/"
   }
 ]
