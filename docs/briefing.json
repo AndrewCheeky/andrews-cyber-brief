@@ -1,9 +1,9 @@
 [
   {
-    "uid": "urn:uuid:b61d7feb-42b7-5dff-8412-12640bbd63b2",
-    "updateDate": "2026-11-25T10:03:00Z",
-    "titleText": "Cyber Trend Watcher 2026-11-25",
-    "mainText": "Rackspace Spot customers face a reported service shutdown on December eighth following its security breach. Confirm the provider’s notice directly. If your business uses Spot, identify workloads, retrieve data, plan migration and test recovery. Cloud owners should also verify credential rotation. No customer deployment or regional compromise was confirmed. Earlier N-able reporting was already covered, so it is not presented as fresh news. Today’s priority is one practical question: does any production service or supplier depend on Spot? Regional and vendor coverage was incomplete.",
+    "uid": "urn:uuid:187c6cf1-e378-559b-9144-ced1223f6f89",
+    "updateDate": "2026-11-26T10:00:00Z",
+    "titleText": "Cyber Trend Watcher 2026-11-26",
+    "mainText": "Palo Alto Networks confirms attacks on exposed firewall management interfaces. Check exposure, restrict access and apply the correct fixes. Drupal confirms a separate installer flaw is being exploited. Upgrade, run the database update and review administrator changes. 1Password reports stolen account metadata, while saying vault contents and protection keys were unaffected. Verify notifications and watch for recovery phishing. In Guadeloupe, an earlier hospital cyberattack continues to affect scheduled care. Healthcare teams should check downtime procedures. No named customer product use or compromise was confirmed. Focus on exposed management, website recovery checks and trusted identity verification.",
     "redirectionUrl": "https://andrewcheeky.github.io/andrews-cyber-brief/"
   }
 ]
