@@ -1,9 +1,9 @@
 [
   {
-    "uid": "urn:uuid:187c6cf1-e378-559b-9144-ced1223f6f89",
-    "updateDate": "2026-11-26T10:00:00Z",
-    "titleText": "Cyber Trend Watcher 2026-11-26",
-    "mainText": "Palo Alto Networks confirms attacks on exposed firewall management interfaces. Check exposure, restrict access and apply the correct fixes. Drupal confirms a separate installer flaw is being exploited. Upgrade, run the database update and review administrator changes. 1Password reports stolen account metadata, while saying vault contents and protection keys were unaffected. Verify notifications and watch for recovery phishing. In Guadeloupe, an earlier hospital cyberattack continues to affect scheduled care. Healthcare teams should check downtime procedures. No named customer product use or compromise was confirmed. Focus on exposed management, website recovery checks and trusted identity verification.",
+    "uid": "urn:uuid:f9f3b0a2-cea9-5066-8664-82dd6808173f",
+    "updateDate": "2026-11-27T09:58:00Z",
+    "titleText": "Cyber Trend Watcher 2026-11-27",
+    "mainText": "Today’s priority is a software supply chain attack affecting Q-Dir and DesktopOK. AhnLab confirms that installers and updates from the official distribution path delivered remote-access malware. Check endpoint inventories and update history. Compare suspect files with the researcher’s hashes and investigate Python malware, scheduled tasks and unusual connections. Isolate devices with confirmed infection indicators. Reinstalling the utility alone may leave malware behind. No named customer deployment or Caribbean victim was confirmed. Earlier firewall, Drupal and identity stories had no verified material change in this check. Regional, vendor and exploited-vulnerability catalog coverage was incomplete.",
     "redirectionUrl": "https://andrewcheeky.github.io/andrews-cyber-brief/"
   }
 ]
